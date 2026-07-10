@@ -66,6 +66,9 @@
 .automation-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
 .automation-header { background: linear-gradient(135deg, #0d1117 0%, #0f2a4a 100%); padding: 24px 28px; border-bottom: 1px solid var(--border); }
 .automation-badge { display: inline-block; background: rgba(255,100,50,0.15); border: 1px solid rgba(255,100,50,0.4); color: #ff6432; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; }
+.automation-badge-deprecated { display: inline-block; background: rgba(139,148,158,0.12); border: 1px solid rgba(139,148,158,0.35); color: #8b949e; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; margin-left: 8px; }
+.automation-note { background: var(--surface2); border-left: 3px solid #8b949e; border-radius: 6px; padding: 12px 16px; margin-top: 14px; font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+.automation-note strong { color: var(--text); }
 .automation-title { font-size: 1.15rem; font-weight: 800; color: var(--text); margin-bottom: 6px; }
 .automation-subtitle { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
 .automation-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
@@ -180,8 +183,8 @@
   <div class="hero-inner">
     <div class="hero-tag">Portfólio Profissional</div>
     <h1>David Disromar</h1>
-    <div class="role">Analytics Engineer · Power BI · SQL Server · ETL · Azure · React · Cloudflare</div>
-    <p>Mais de 5 anos transformando dados em decisões estratégicas. Especialista no ecossistema Microsoft e em arquitetura serverless, com foco em dashboards, pipelines de dados, automação e desenvolvimento de sistemas corporativos.</p>
+    <div class="role">Data Engineer · SQL · Pipelines ETL · Azure · Docker · Python</div>
+    <p>Mais de 5 anos construindo soluções de dados em ambientes corporativos reais — de pipelines e infraestrutura serverless a sistemas full-stack em produção.</p>
     <div class="contact-row">
       <div class="contact-item">📍 Salvador, BA</div>
       <div class="contact-item">📧 <a href="mailto:david.alfatec@gmail.com">david.alfatec@gmail.com</a></div>
@@ -193,17 +196,18 @@
 
 <div class="skills-bar">
   <div class="skills-bar-inner">
-    <span class="skill-chip">Power BI · PL-300</span>
-    <span class="skill-chip">Azure · DP-900</span>
     <span class="skill-chip">SQL Server</span>
-    <span class="skill-chip">ETL · Power Query</span>
-    <span class="skill-chip">Star Schema</span>
+    <span class="skill-chip">Pipelines ETL</span>
+    <span class="skill-chip">Node.js</span>
+    <span class="skill-chip">Docker</span>
+    <span class="skill-chip">Azure · DP-900</span>
+    <span class="skill-chip">Python</span>
+    <span class="skill-chip">Airflow</span>
     <span class="skill-chip">React 18 · Vite</span>
     <span class="skill-chip">Cloudflare Workers · D1</span>
     <span class="skill-chip">NestJS · Prisma</span>
-    <span class="skill-chip">Power Automate</span>
+    <span class="skill-chip">Power BI · PL-300</span>
     <span class="skill-chip">SharePoint · Entra ID</span>
-    <span class="skill-chip">N8N · Claude API</span>
   </div>
 </div>
 
@@ -212,7 +216,11 @@
   <div class="section">
     <div class="section-header"><div class="section-icon">👤</div><div class="section-title">Sobre mim</div><div class="section-line"></div></div>
     <div class="about-card">
-      <p>Analista de BI / Analytics Engineer com mais de 5 anos de experiência em dados, automação e desenvolvimento de sistemas corporativos. Especializado no ecossistema Microsoft e em arquitetura serverless edge — construí do zero o ERP operacional da OParks Travel (React 18 + Cloudflare Workers/D1), pipelines serverless em Node.js + Docker no Azure, automações com IA generativa (Claude API + N8N) e governança de dados com padrões COSO/SOX. Buscando posições como Analytics Engineer, BI Engineer ou Data Engineer Pleno.</p>
+      <p style="margin-bottom: 16px;">Data Engineer com mais de 5 anos construindo pipelines, infraestrutura e sistemas de dados em ambientes corporativos reais.</p>
+      <p style="margin-bottom: 10px;"><strong style="color: var(--text);">Aplicações Web & Bancos de Dados:</strong> Desenvolvimento do zero de Sistema Interno Operacional full-stack (React, Node.js, Cloudflare Workers/D1), banco relacional serverless e controle de acesso via Azure AD (RBAC), com segregação de funções e trilha de auditoria alinhadas a princípios de controle interno (COSO).</p>
+      <p style="margin-bottom: 10px;"><strong style="color: var(--text);">Pipelines Serverless & Web Scraping:</strong> Construção de esteiras automatizadas de extração de dados (Node.js, Playwright, Docker), hospedadas em Azure Container Instances, com custo ocioso zero e contorno de bloqueios anti-bot.</p>
+      <p style="margin-bottom: 10px;"><strong style="color: var(--text);">Automação & IA Generativa:</strong> Arquitetura de pipeline de faturamento integrando Claude API (LLM) via N8N com SharePoint e Outlook para validação inteligente de invoices — hoje migrado e internalizado no sistema principal.</p>
+      <p><strong style="color: var(--text);">Base Analítica:</strong> SQL avançado e modelagem dimensional (Star Schema, DAX), com expansão atual em Python para engenharia de dados e orquestração de pipelines (Airflow).</p>
     </div>
   </div>
 
@@ -223,7 +231,7 @@
     <div class="erp-card">
       <div class="erp-header">
         <div class="erp-badges">
-          <span class="erp-badge-prod">⚡ EM PRODUÇÃO · ALFA VIAGENS</span>
+          <span class="erp-badge-prod">⚡ EM PRODUÇÃO · OPARKS TRAVEL</span>
           <span class="erp-badge-priv">🔒 CÓDIGO PRIVADO</span>
         </div>
         <div class="erp-title">Sistema Operacional Interno — ERP Full-Stack Serverless</div>
@@ -378,9 +386,12 @@
     <div class="section-header"><div class="section-icon">⚡</div><div class="section-title">Automação com IA</div><div class="section-line"></div></div>
     <div class="automation-card">
       <div class="automation-header">
-        <div class="automation-badge">⚡ Projeto em Produção · Oparks Travel</div>
+        <div class="automation-badge-deprecated">⏸ DESCONTINUADO · MIGRADO PARA O SISTEMA INTERNO</div>
         <div class="automation-title">Invoice Automation — Pipeline Inteligente com IA</div>
-        <div class="automation-subtitle">Automação end-to-end de processamento de faturas. O pipeline lê arquivos do SharePoint, usa IA (Claude API) para validar e cruzar dados, aciona aprovação humana por e-mail, atualiza banco de dados e registra tudo no QuickBooks com geração de PDF automática — orquestrado via N8N.</div>
+        <div class="automation-subtitle">Automação end-to-end de processamento de faturas. O pipeline lia arquivos do SharePoint, usava IA (Claude API) para validar e cruzar dados, acionava aprovação humana por e-mail, atualizava banco de dados e registrava tudo no QuickBooks com geração de PDF automática — orquestrado via N8N.</div>
+        <div class="automation-note">
+          <strong>Nota de arquitetura:</strong> este pipeline foi minha prova de conceito inicial para validação de invoices via IA. Após validar a abordagem, migrei a lógica de processamento com Claude API para dentro do Sistema ERP interno — eliminando a camada de orquestração externa (N8N) e integrando a validação diretamente ao banco de dados (Cloudflare D1), reduzindo pontos de falha e latência de sincronização. Mantido aqui como demonstração de domínio em orquestração de automações com LLMs.
+        </div>
         <div class="automation-tags">
           <span class="automation-tag">N8N</span><span class="automation-tag">Claude API</span><span class="automation-tag">SharePoint</span><span class="automation-tag">QuickBooks</span><span class="automation-tag">Outlook</span><span class="automation-tag">Microsoft Graph API</span>
         </div>
@@ -576,16 +587,17 @@
       <div class="roadmap-item"><div class="roadmap-line"><div class="roadmap-dot done"></div><div class="roadmap-connector"></div></div><div class="roadmap-content"><div class="roadmap-title">Azure & Microsoft 365 <span class="badge-done">✓ Concluído</span></div><div class="roadmap-sub">DP-900 certificado · SharePoint · Entra ID · Power Automate</div></div></div>
       <div class="roadmap-item"><div class="roadmap-line"><div class="roadmap-dot done"></div><div class="roadmap-connector"></div></div><div class="roadmap-content"><div class="roadmap-title">Full-Stack Serverless <span class="badge-done">✓ Concluído</span></div><div class="roadmap-sub">React 18 + Vite · Cloudflare Workers/D1/R2 · NestJS 11 + Prisma · ERP em produção</div></div></div>
       <div class="roadmap-item"><div class="roadmap-line"><div class="roadmap-dot current"></div><div class="roadmap-connector"></div></div><div class="roadmap-content"><div class="roadmap-title">SQL Server Avançado <span class="badge-current">Em andamento</span></div><div class="roadmap-sub">JOINs · CTEs · Window Functions · Stored Procedures · Views</div></div></div>
-      <div class="roadmap-item"><div class="roadmap-line"><div class="roadmap-dot next"></div><div class="roadmap-connector"></div></div><div class="roadmap-content"><div class="roadmap-title">Python para Análise de Dados</div><div class="roadmap-sub">Pandas · NumPy · Matplotlib · Conexão com SQL Server</div></div></div>
-      <div class="roadmap-item"><div class="roadmap-line"><div class="roadmap-dot next"></div><div class="roadmap-connector"></div></div><div class="roadmap-content"><div class="roadmap-title">Azure Data Engineer (DP-203)</div><div class="roadmap-sub">Azure Data Factory · Data Lake · Pipelines na nuvem</div></div></div>
-      <div class="roadmap-item"><div class="roadmap-line"><div class="roadmap-dot next"></div></div><div class="roadmap-content"><div class="roadmap-title">Databricks & PySpark</div><div class="roadmap-sub">Engenharia de Dados em escala · Medallion Architecture</div></div></div>
+      <div class="roadmap-item"><div class="roadmap-line"><div class="roadmap-dot next"></div><div class="roadmap-connector"></div></div><div class="roadmap-content"><div class="roadmap-title">Python para Engenharia de Dados</div><div class="roadmap-sub">Scripts de ETL · Conexão com bancos (SQLAlchemy) · Automação de pipelines</div></div></div>
+      <div class="roadmap-item"><div class="roadmap-line"><div class="roadmap-dot next"></div><div class="roadmap-connector"></div></div><div class="roadmap-content"><div class="roadmap-title">Apache Airflow</div><div class="roadmap-sub">Orquestração de pipelines · DAGs · Agendamento e monitoramento</div></div></div>
+      <div class="roadmap-item"><div class="roadmap-line"><div class="roadmap-dot next"></div><div class="roadmap-connector"></div></div><div class="roadmap-content"><div class="roadmap-title">PySpark</div><div class="roadmap-sub">Processamento de dados em escala · Transformações distribuídas</div></div></div>
+      <div class="roadmap-item"><div class="roadmap-line"><div class="roadmap-dot next"></div></div><div class="roadmap-content"><div class="roadmap-title">Azure Databricks</div><div class="roadmap-sub">Lakehouse · Medallion Architecture · Integração nativa com Azure</div></div></div>
     </div>
   </div>
 
 </div>
 
 <footer>
-  David Disromar Rodrigues · Analytics Engineer / Analista de BI Pleno · Salvador, BA<br>
+  David Disromar Rodrigues · Data Engineer · Salvador, BA<br>
   <a href="https://linkedin.com/in/david-disromar">LinkedIn</a> · <a href="https://github.com/DDisromar">GitHub</a> · <a href="mailto:david.alfatec@gmail.com">david.alfatec@gmail.com</a>
 </footer>
 
